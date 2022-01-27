@@ -1,4 +1,4 @@
-package car.racing.game;
+package test.java;
 
 public class test {
     public static void main(String[] args) {
