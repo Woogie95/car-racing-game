@@ -2,15 +2,13 @@ package car.racing.game;
 
 public class Output {
 
-    public static void countNumberMessage() {
-        System.out.println("시도할 회수는 몇회인가요?");
-    }
-
-    public static void executeResultMessage() {
+    public static void executeResultMessage() { // 실행 결과 메시지
         System.out.println("실행 결과");
     }
 
     public static void winMessage() {
-        System.out.println();
+        System.out.println("가 최종 우승했습니다.");
     }
+
+    public
 }

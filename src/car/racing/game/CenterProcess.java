@@ -1,7 +1,15 @@
 package car.racing.game;
 
 public class CenterProcess {
-    Input input = new Input();
 
+    public void startCarRacingProcess() {
+        Input input = new Input();
+        input.inputCarName();
+        input.inputRotateNumberCount();
 
+        Output.executeResultMessage();
+        CarType carType = new CarType();
+        carType.divideCarType(input.inputCarName());
+
+    }
 }
