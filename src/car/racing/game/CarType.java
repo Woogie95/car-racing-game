@@ -6,11 +6,10 @@ import java.util.List;
 
 public class CarType {
 
-    public List<String> divideCarType(String carName) {
-        String[] nameDivide = carName.split(",");
+    public List<String> divideCarType() {
+        Input input = new Input();
+        String[] nameDivide = input.inputCarName().split(",");
         return new ArrayList<>(Arrays.asList(nameDivide));
     }
-
-    public void
 
 }
