@@ -1,8 +1,9 @@
 package car.racing.game;
 
-public class CarRacingGameStart {
+public class CarRacingGamePlay {
     public static void main(String[] args) {
         CenterProcess centerProcess = new CenterProcess();
-        centerProcess.startCarRacingProcess();
+        Input input = new Input();
+        centerProcess.startCarRacingProcess(input);
     }
 }
