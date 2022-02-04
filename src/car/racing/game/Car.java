@@ -1,24 +1,32 @@
 package car.racing.game;
 
-
 import java.util.List;
 
 public class Car {
 
-    private String carName;
+    public static final int MOVE_VALUE = 4;
 
-    public Car() {
-        this.carName = "";
+    private final List<String> carName;
+    private int position;
+
+    public Car(List<String> carName) {
+        this.carName = carName;
+        this.position = 0;
+
     }
 
-    public void recordScore(List<String> car) {
-        for (int i = 0; i < car.size(); i++) {
-            System.out.println(car.size());
+    public int checkNumberCount(int number) {
+        if (MOVE_VALUE >= number) {
+            position++;
         }
+        return position;
     }
 
-    public void checkNumberCount(int num) {
-
+    public List<String> getCarName() {
+        return carName;
     }
 
+    public int getPosition() {
+        return position;
+    }
 }
