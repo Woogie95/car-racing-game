@@ -1,28 +1,26 @@
 package car.racing.game;
 
-import java.util.List;
-
 public class Car {
 
-    public static final int MOVE_VALUE = 4;
+    public static final int CAR_MOVE_CONDITION = 4;
 
-    private final List<String> carName;
+    private final String carName;
     private int position;
 
-    public Car(List<String> carName) {
+    public Car(String carName, int position) {
         this.carName = carName;
-        this.position = 0;
+        this.position = position;
 
     }
 
     public int checkNumberCount(int number) {
-        if (MOVE_VALUE >= number) {
+        if (CAR_MOVE_CONDITION >= number) {
             position++;
         }
         return position;
     }
 
-    public List<String> getCarName() {
+    public String getCarName() {
         return carName;
     }
 
