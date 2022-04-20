@@ -10,14 +10,6 @@ public class Car {
     public Car(String carName, int position) {
         this.carName = carName;
         this.position = position;
-
-    }
-
-    public int checkNumberCount(int number) {
-        if (CAR_MOVE_CONDITION >= number) {
-            position++;
-        }
-        return position;
     }
 
     public String getCarName() {
@@ -27,4 +19,5 @@ public class Car {
     public int getPosition() {
         return position;
     }
+
 }

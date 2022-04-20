@@ -1,23 +1,22 @@
 package car.racing.game;
 
-import java.util.List;
-
 public class Output {
 
-    public static void executeResultMessage() {
-        System.out.println();
+    public static void printResultMessage() {
         System.out.println("실행 결과");
     }
 
-    public static void printPresentSituation(List<String> car, int position) {
-        for (int i = 0; i < car.size(); i++) {
+    public static void printPresentSituation(Car car) {
 
-        }
 
     }
 
-    public static void printWinMessage() {
-        System.out.println("가 최종 우승했습니다.");
+    public static void printWinMessage(String name) {
+        System.out.println(name + "가 최종 우승했습니다.");
+    }
+
+    public static void changeLine() {
+        System.out.println();
     }
 
 }
