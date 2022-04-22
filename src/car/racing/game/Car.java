@@ -7,10 +7,15 @@ public class Car {
     private final String carName;
     private int position;
 
-    public Car(String carName, int position) {
+    public Car(String carName) {
         this.carName = carName;
-        this.position = position;
+        this.position = 0;
     }
+
+    public void moveCar() {
+        this.position++;
+    }
+
 
     public String getCarName() {
         return carName;

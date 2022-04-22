@@ -8,5 +8,10 @@ public class RandomnessNumber {
         return (int) (Math.random() * RANDOM_NUMBER_FROM_0_TO_9);
     }
 
+    public int moveCar() {
+      return
+    };
+
+
 }
 

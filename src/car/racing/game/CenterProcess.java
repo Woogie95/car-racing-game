@@ -29,7 +29,7 @@ public class CenterProcess {
     public void prepareUserGame(int position) {
         List<Car> car = new ArrayList<>();
         for (String carName : carList) {
-            Car carType = new Car(carName, position);
+           new Car(carName, position);
             car.add(carType);
         }
     }
