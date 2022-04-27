@@ -2,7 +2,7 @@ package car.racing.game;
 
 public class CarRacingApplication {
     public static void main(String[] args) {
-        CenterProcess centerProcess = new CenterProcess();
+        CarRacingController centerProcess = new CarRacingController();
         centerProcess.carRacingProcess();
     }
 }
