@@ -1,21 +1,31 @@
 package car.racing.game;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
 
-    public static void winningCarName(List<Car> cars) {
-        int max = 0;
+    private final List<Car> cars;
 
-        for (Car car : cars) {
-            compareCaeScore(car, max);
-        }
+    public Cars() {
+        this.cars = new ArrayList<>();
+    }
+
+    public void addCar(Car car) {
+        this.cars.add(car);
+    }
+
+
+    public static void winningCarName(String name) {
+
     }
 
     public static void compareCaeScore(Car car, int max) {
-        if (car.getPosition() > max) {
-            max = car.getPosition();
-        }
+
+    }
+
+    public List<Car> getCars() {
+        return this.cars;
     }
 
 }
