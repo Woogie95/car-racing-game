@@ -1,7 +1,8 @@
-package car.racing.game;
+package main;
 
 public class Car {
 
+    private static final int RANDOM_NUMBER_FROM_0_TO_9 = 10;
     public static final int CAR_MOVE_CONDITION = 4;
     public static final int INITIAL_VALUE = 0;
 
@@ -21,10 +22,14 @@ public class Car {
         return position;
     }
 
-    public void checkPositionCount(int randomNumber) {
-        if (CAR_MOVE_CONDITION >= randomNumber) {
+    private void checkPositionCount() { // 비교해서 포지션 ++
+        if (CAR_MOVE_CONDITION >= makeRandomNumber()) {
             position++;
         }
+    }
+
+    private static int makeRandomNumber() { // 랜덤 숫자 생성 기능
+        return (int) (Math.random() * RANDOM_NUMBER_FROM_0_TO_9);
     }
 
 }

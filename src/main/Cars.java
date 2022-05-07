@@ -1,4 +1,4 @@
-package car.racing.game;
+package main;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,15 +13,6 @@ public class Cars {
 
     public void addCar(Car car) {
         this.cars.add(car);
-    }
-
-
-    public static void winningCarName(String name) {
-
-    }
-
-    public static void compareCaeScore(Car car, int max) {
-
     }
 
     public List<Car> getCars() {
