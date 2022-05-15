@@ -1,19 +1,13 @@
 package main;
 
+import java.util.List;
+
 public class Winner {
+    private static final String POSITION_MARK = "-";
 
+    public static void winCarName(List<Car> cars) {
+        StringBuilder names = new StringBuilder();
 
-    public static void winningCarName() {
-
-
-    }
-
-    public static void compareCaeScore(Car car) {
-        int max = 0;
-
-        for (int i = 0; i < ; i++) {
-
-
-        }
     }
 }
+

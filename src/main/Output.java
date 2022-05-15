@@ -2,7 +2,6 @@ package main;
 
 public class Output {
 
-    private static final String POSITION_MARK = "-";
     private static final String NAME_POSITION_DELIMITER = " : ";
 
     public static void printNameInputMessage() {
@@ -17,12 +16,15 @@ public class Output {
         System.out.println("실행 결과");
     }
 
-    public static void showCarRacing(Car car) {
-        System.out.println(car.getCarName() + " : " + car.getPosition());
+    public static void printRealTimeView(Car car) {
+        System.out.print(car.getCarName() + NAME_POSITION_DELIMITER);
+        RearTimeView.showPositionResult(car);
+        changeLine();
     }
 
-    public static void printWinMessage(Car car) {
-        System.out.println(car.getCarName() + "가 최종 우승했습니다.");
+
+    public static void printWinMessage(String name) {
+        System.out.println(name + "가 최종 우승했습니다.");
     }
 
     public static void changeLine() {

@@ -22,14 +22,12 @@ public class Car {
         return position;
     }
 
-    private void checkPositionCount() { // 비교해서 포지션 ++
+    public void checkPositionCount() {
         if (CAR_MOVE_CONDITION >= makeRandomNumber()) {
             position++;
         }
     }
 
-    private static int makeRandomNumber() { // 랜덤 숫자 생성 기능
-        return (int) (Math.random() * RANDOM_NUMBER_FROM_0_TO_9);
-    }
+
 
 }
