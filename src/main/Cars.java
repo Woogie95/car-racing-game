@@ -1,32 +1,17 @@
 package main;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
 
-    private final List<Car> cars;
-    private final List<Car> positions;
+    private final List<Car> carList;
 
-    public Cars() {
-        this.cars = new ArrayList<>();
-        this.positions = new ArrayList<>();
-    }
-
-    public void addCar(Car car) {
-        this.cars.add(car);
-    }
-
-    public void addPosition(Car position) {
-        this.positions.add(position);
+    public Cars(List<Car> carList) {
+        this.carList = carList;
     }
 
     public List<Car> getCars() {
-        return this.cars;
-    }
-
-    public List<Car> getPositions() {
-        return this.positions;
+        return this.carList;
     }
 
 }

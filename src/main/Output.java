@@ -3,6 +3,7 @@ package main;
 public class Output {
 
     private static final String NAME_POSITION_DELIMITER = " : ";
+    private static final String HYPHEN = "-";
 
     public static void printNameInputMessage() {
         System.out.println("경주할 자동차 이름을 입력하세요 (이름은 쉼표(,)를 기준으로 구분).");
@@ -16,15 +17,16 @@ public class Output {
         System.out.println("실행 결과");
     }
 
-    public static void printRealTimeView(Car car) {
-        System.out.print(car.getCarName() + NAME_POSITION_DELIMITER);
-        RearTimeView.showPositionResult(car);
-        changeLine();
+    public static void printName(String carName) {
+        System.out.print(carName + NAME_POSITION_DELIMITER);
     }
 
-
-    public static void printWinMessage(String name) {
+    public static void printWinMessage(StringBuilder name) {
         System.out.println(name + "가 최종 우승했습니다.");
+    }
+
+    public static void printPosition() {
+        System.out.print(HYPHEN);
     }
 
     public static void changeLine() {
