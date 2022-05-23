@@ -6,7 +6,6 @@ public class Car {
     private static final int CAR_MOVE_CONDITION = 4;
     private static final int RANDOM_NUMBER_FROM_0_TO_9 = 10;
 
-
     private final String carName;
     private int position;
 
@@ -25,7 +24,7 @@ public class Car {
 
     public void IncreasePosition() {
         if (CAR_MOVE_CONDITION >= makeRandomNumber()) {
-            move();
+            position++;
         }
     }
 

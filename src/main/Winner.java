@@ -1,46 +1,32 @@
 package main;
 
-import static main.CarRacingController.REPEAT_INITIAL_VALUE;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Winner {
 
     private static final int MAX_INITIAL_PRICE = 0;
 
-    public static void showCarRacingResult(Cars carsList) {
-
-        for (Car cars : carsList.getCars()) {
-            Output.printName(cars.getCarName());
-            showPosition(cars);
-            Output.changeLine();
+    public static List<Car> searchMaxValue(Cars cars) {
+        List<Car> winnerCars = new ArrayList<>();
+        int max = cars.getCars().get(0).getPosition();
+        for (Car car : cars.getCars()) {
+            max = 최대값찾아(car, max);
         }
-        Output.changeLine();
+        for (Car car : cars.getCars()) {
+            똑같은놈찾아(car, max, winnerCars);
+        }
+        return winnerCars;
     }
 
-    public static void showPosition(Car carList) {
-        for (int j = REPEAT_INITIAL_VALUE; j < carList.getPosition(); j++) {
-            Output.printPosition();
+    public static int 최대값찾아(Car car, int max) {
+        return Math.max(car.getPosition(), max);
+    }
+
+    public static void 똑같은놈찾아(Car car, int max, List<Car> cars) {
+        if (car.getPosition() == max) {
+            cars.add(car);
         }
     }
 
-
-    public static void searchMaxValue(Cars carsList) {
-
-        int maxPosition = MAX_INITIAL_PRICE;
-
-        for (Car max : carsList.getCars()) {
-            maxPosition = Math.max(max.getPosition(), maxPosition);
-        }
-        connectWinnerName(carsList, maxPosition);
-    }
-
-    public static void connectWinnerName(Cars carsList, int maxPosition) {
-        StringBuilder connectName = new StringBuilder();
-
-        for (int i = 0; i < carsList.getCars().size(); i++) {
-            if (maxPosition == carsList.getCars().get(i).getPosition()) {
-                connectName.append(carsList.getCars().get(i).getCarName()).append(" ");
-            }
-        }
-        Output.printWinMessage(connectName);
-    }
 }

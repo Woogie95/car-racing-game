@@ -20,27 +20,27 @@ public class CarRacingController {
         for (int i = REPEAT_INITIAL_VALUE; i < repeatCount; i++) {
             showRacingSituation(cars);
         }
-        Winner.showCarRacingResult(cars);
-        Winner.searchMaxValue(cars);
+        showRacingSituation(cars);
+        Output.printWinnerMessage(Winner.searchMaxValue(cars));
     }
 
     public static void showRacingSituation(Cars carList) {
         for (Car cars : carList.getCars()) {
-            Output.printName(cars.getCarName());
-            Output.printPosition();
+            Output.printName(cars);
             cars.IncreasePosition();
-            showPosition(cars.getPosition());
-            Output.changeLine();
+            Output.printPosition(cars);
+            System.out.println();
+            //showPosition(cars.getPosition());
         }
-        Output.changeLine();
+        Output.printLineChange();
     }
 
-    public static void showPosition(int position) {
-        for (int j = REPEAT_POSITION_INITIAL_VALUE; j < position; j++) {
-            Output.printPosition();
-        }
-
-    }
+//    public static void showPosition(int position) {
+//        for (int j = REPEAT_POSITION_INITIAL_VALUE; j < position; j++) {
+//            Output.printPosition();
+//        }
+//
+//    }
 
     private static List<String> divideCarName(String name) {
         return List.of((name.split(SYMBOL)));
