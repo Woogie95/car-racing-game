@@ -1,8 +1,8 @@
-package main;
+package racing1;
 
 import java.util.List;
 
-import static main.CarRacingController.REPEAT_INITIAL_VALUE;
+import static racing1.CarRacingController.REPEAT_INITIAL_VALUE;
 
 public class Output {
 
